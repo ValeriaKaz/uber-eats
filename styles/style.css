@@ -1,0 +1,62 @@
+:root {
+    --display: flex;
+    --flex-wrap: nowrap;
+    --flex-direction: row;
+    --justify-content: space-between;
+    --align-items: center;
+    --background-color: white;
+}
+
+html,
+body {
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+.container {
+    display: var(--display);
+    flex-wrap: var(--flex-wrap);
+    flex-direction: var(--flex-direction);
+    justify-content: var(--justify-content);
+    align-items: var(--align-items);
+    border: 1px dotted green;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--background-color);
+    box-shadow: 0px 5px rgba(38, 38, 38, 0.16);
+    border: 1px solid red;
+}
+
+.logo {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 119.23px;
+    height: 12.31px;
+}
+
+.right-wrapper {
+    display: var(--display);
+    flex-direction: var(--flex-direction);
+    /* justify-content: center;  TODO*/
+    align-items: var(--align-items);
+    gap: 80px;
+    border: 1px solid green;
+}
+
+.login-button {
+    margin-left: auto;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 24px;
+    background-color: var(--background-color);
+    border: 1px solid #E0E0E0;
+    padding: 14px 20px 14px 20px;
+}
+
+.basket {
+    width: 18.95px;
+}
