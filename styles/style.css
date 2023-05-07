@@ -135,7 +135,12 @@ input {
 }
 
 footer {
+    margin-top: auto;
     background-color: rgba(38, 38, 38, 1);
+}
+
+.container-2 {
+    align-items: stretch;
 }
 
 hr.footer-line {
@@ -159,7 +164,7 @@ select {
     line-height: 15.23px;
     height: 40px;
     width: 100%;
-    margin-top: 32px;
+    margin-top: 15px;
 }
 
 .share {
@@ -168,13 +173,13 @@ select {
 }
 
 .info {
-    margin-bottom: 10px;
     font-size: var(--font-size-16);
     line-height: var(--line-height-19);
     font-weight: var(--font-weight-400);
 }
 
-.info p {
+.info a,
+p {
     color: rgba(255, 255, 255, 1);
 }
 
@@ -187,7 +192,11 @@ select {
     height: 24px;
 }
 
-.i p {
+.i a {
     font-size: var(--font-size-13);
     line-height: 15.23px;
+}
+
+a:link {
+    text-decoration: none;
 }
