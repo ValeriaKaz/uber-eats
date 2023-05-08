@@ -1,5 +1,6 @@
 :root {
     --color-1: rgba(255, 255, 255, 1);
+    --color-2: rgba(59, 59, 59, 1);
     --color: rgba(98, 98, 98, 1);
     --font-weight-400: 400;
     --font-size-16: 16px;
@@ -40,8 +41,6 @@ header {
 .logo {
     padding-top: 30px;
     padding-bottom: 30px;
-    width: 110px;
-    height: 12.31px;
 }
 
 .push {
@@ -149,22 +148,8 @@ hr.footer-line {
 }
 
 footer .white-logo {
-    width: 190.77px;
-    height: 19.69px;
     padding-top: 56px;
     padding-bottom: 40px;
-}
-
-select {
-    color: var(--color-1);
-    background-color: rgba(59, 59, 59, 1);
-    border: 0;
-    border-radius: 0;
-    font-size: 15px;
-    line-height: 15.23px;
-    height: 40px;
-    width: 100%;
-    margin-top: 15px;
 }
 
 .share {
@@ -187,11 +172,6 @@ p {
     color: rgba(73, 161, 68, 1);
 }
 
-.share img {
-    width: 24px;
-    height: 24px;
-}
-
 .i a {
     font-size: var(--font-size-13);
     line-height: 15.23px;
@@ -199,4 +179,21 @@ p {
 
 a:link {
     text-decoration: none;
+}
+
+.lang {
+    display: var(--display);
+    background-color: var(--color-2);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lang select {
+    color: var(--color-1);
+    background-color: var(--color-2);
+    font-size: var(--font-size-13);
+    line-height: 15.23px;
+    width: 80%;
+    padding: 12px 0;
+    border: none;
 }
