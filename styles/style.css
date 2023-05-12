@@ -1,6 +1,7 @@
 :root {
     --color-1: rgba(255, 255, 255, 1);
     --color-2: rgba(59, 59, 59, 1);
+    --color-3: rgb(107, 139, 32);
     --color: rgba(98, 98, 98, 1);
     --font-weight-400: 400;
     --font-size-16: 16px;
@@ -14,6 +15,11 @@
     --flex-direction: row;
     --justify-content: space-between;
     --align-items: center;
+    --transform: scale(1.1);
+    --transition: all .3s ease;
+    --text-decoration: none;
+    --margin_0_auto: 0 auto;
+    --max-width: 1124px;
 }
 
 html,
@@ -21,14 +27,7 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-}
-
-.container {
-    display: var(--display);
-    flex-wrap: var(--flex-wrap);
-    flex-direction: var(--flex-direction);
-    justify-content: var(--justify-content);
-    align-items: var(--align-items);
+    scroll-behavior: smooth;
 }
 
 header {
@@ -38,42 +37,56 @@ header {
     box-shadow: 0px 0px 16px 0px rgba(38, 38, 38, 0.16);
 }
 
-.logo {
-    padding-top: 30px;
-    padding-bottom: 30px;
+.navbar {
+    margin: var(--margin_0_auto);
+    max-width: var(--max-width);
+    display: var(--display);
+    flex-direction: var(--flex-direction);
+    justify-content: var(--justify-content);
+    align-items: var(--align-items);
 }
 
-.push {
-    margin-left: auto;
+.navbar-logo {
+    transition: var(--transition);
 }
 
-.login-button {
+.navbar-logo:hover {
+    transform: var(--transform);
+}
+
+.right-navbar {
+    display: var(--display);
+    flex-direction: var(--flex-direction);
+    align-items: var(--align-items);
+    justify-content: center;
+}
+
+.right-navbar-login button {
     font-weight: 700;
     font-size: var(--font-size-13);
     line-height: var(--line-height-24);
     background-color: var(--color-1);
     border: 1px solid rgba(224, 224, 224, 1);
     border-radius: 10px;
-    padding: 8px 20px 8px 20px;
+    padding: 8px 20px;
+    transition: var(--transition);
+    margin: 10px 20px 10px 0;
 }
 
-.login-button:hover {
+.right-navbar-login button:hover {
     background-color: rgba(224, 224, 224, 0.3);
-    border-radius: 15px;
+    border-radius: 13px;
 }
 
-.basket {
-    width: 20px;
-    margin: 0 15px 0 15px;
+.right-navbar-basket:hover {
+    transform: var(--transform);
 }
 
-.basket:hover {
-    width: 22px;
-    margin-left: 13px;
-}
-
-::placeholder {
-    color: var(--color);
+main {
+    max-width: var(--max-width);
+    margin: var(--margin_0_auto);
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 input {
@@ -85,10 +98,9 @@ input {
     border: 0;
     outline: 0;
     border-bottom: 1px solid rgba(98, 98, 98, 0.3);
-    padding-top: 56px;
 }
 
-.resto {
+.main-title {
     font-weight: var(--font-weight-400);
     font-size: 22px;
     line-height: 34px;
@@ -96,23 +108,28 @@ input {
     color: var(--font-color-1);
 }
 
+.main-menu {
+    max-width: var(--max-width);
+}
+
+.main-menu a {
+    text-decoration: none;
+}
+
 .food-block {
     box-sizing: border-box;
-    margin-bottom: 16px;
+    margin: 16px 0;
 }
 
 .food-block:hover {
-    background-color: rgba(117, 117, 117, 0.1);
+    box-shadow: 0 0 10px rgb(27, 128, 15);
+    border-radius: 10px;
 }
 
 .food-block img {
     width: 100%;
-    height: 100%;
-    border-radius: 15px;
-}
-
-.food-block:hover {
-    box-shadow: 0 0 10px rgba(243, 241, 241, 0.5);
+    border-radius: 10px;
+    padding-bottom: 16px;
 }
 
 .food-name {
@@ -125,6 +142,7 @@ input {
 
 .price {
     margin: 0;
+    padding: 4px 0;
     font-weight: var(--font-weight-400);
     font-size: 14px;
     line-height: var(--line-height-21);
@@ -140,55 +158,34 @@ input {
 
 footer {
     margin-top: auto;
+    width: 100%;
     background-color: rgba(38, 38, 38, 1);
 }
 
-.container-2 {
-    align-items: stretch;
+.footer-content {
+    max-width: var(--max-width);
+    margin: var(--margin_0_auto);
 }
 
-hr.footer-line {
-    border: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-footer .white-logo {
+.footer-content-logo {
     padding-top: 56px;
     padding-bottom: 40px;
 }
 
-.share {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+hr {
+    height: 1px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 32px;
 }
 
-.info {
-    font-size: var(--font-size-16);
-    line-height: var(--line-height-19);
-    font-weight: var(--font-weight-400);
-}
-
-.info a,
-p {
-    color: rgba(255, 255, 255, 1);
-}
-
-.info span {
-    color: rgba(73, 161, 68, 1);
-}
-
-.i a {
-    font-size: var(--font-size-13);
-    line-height: 15.23px;
-}
-
-a:link {
-    text-decoration: none;
+.footer-main-box1 {
+    margin-bottom: 40px;
 }
 
 .lang {
-    display: var(--display);
     background-color: var(--color-2);
+    display: var(--display);
     justify-content: space-around;
     align-items: center;
 }
@@ -201,4 +198,95 @@ a:link {
     width: 80%;
     padding: 12px 0;
     border: none;
+}
+
+.footer-main-box1-text {
+    color: rgba(255, 255, 255, 1);
+    font-size: var(--font-size-16);
+    line-height: var(--line-height-19);
+    font-weight: var(--font-weight-400);
+    margin-top: 33px;
+    margin-bottom: 17px;
+}
+
+.footer-main-box1-text span {
+    color: rgba(73, 161, 68, 1);
+}
+
+.facebook,
+.twitter,
+.instagram {
+    transition: all .1s ease;
+}
+
+.facebook:hover {
+    transform: var(--transform);
+}
+
+.twitter:hover {
+    transform: var(--transform);
+}
+
+.instagram:hover {
+    transform: var(--transform);
+}
+
+.footer-main-box2 div,
+.footer-main-box3 div {
+    margin-bottom: 23px;
+}
+
+.footer-main-box2 a,
+.footer-main-box3 a {
+    text-decoration: var(--text-decoration);
+    font-size: var(--font-size-13);
+    line-height: 15.23px;
+    font-weight: var(--font-weight-400);
+    color: rgba(255, 255, 255, 1);
+}
+
+.footer-main-box2 a:hover,
+.footer-main-box3 a:hover {
+    color: var(--color-3);
+}
+
+footer .row {
+    margin-right: 0;
+}
+
+.app-store {
+    float: right;
+}
+
+.google-play {
+    float: left;
+}
+
+.app-store,
+.google-play {
+    margin: 25px 0;
+    transition: var(--transition);
+}
+
+.app-store:hover,
+.google-play:hover {
+    transform: var(--transform);
+}
+
+.footer-content-info div {
+    margin: 10px 0;
+}
+
+.footer-content-info .info {
+    font-size: var(--font-size-13);
+    color: var(--color-1);
+    font-weight: var(--font-weight-400);
+}
+
+.footer-content-info a {
+    text-decoration: var(--text-decoration);
+}
+
+.footer-content-info .data:hover {
+    color: var(--color-3);
 }
