@@ -30,6 +30,12 @@ body {
     scroll-behavior: smooth;
 }
 
+.btn-up {
+    position: fixed;
+    bottom: 24px;
+    right: 16px;
+}
+
 header {
     position: sticky;
     top: 0;
